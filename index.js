@@ -10,6 +10,7 @@ async function asyncModule() {
   if (buildEnv !== "dev") {
     return;
   }
+  
   this.nuxt.hook("generate:done", async nuxt => {
     const ftp_config = nuxt.options.project.ftp;
     const ssh_config = {
